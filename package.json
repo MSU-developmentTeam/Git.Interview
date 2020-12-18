@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/MSU-developmentTeam/Git.Interview#readme",
   "dependencies": {
+    "eslint": "^7.15.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "mysql": "^2.18.1",
-    "validate-email-node-js": "0.0.2",
-    "sequelize": "^4.41.2"
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^4.41.2",
+    "validate-email-node-js": "0.0.2"
   }
 }
