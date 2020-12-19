@@ -6,7 +6,7 @@ module.exports = function(app) {
         if (req.query.author_id) {
           query.AuthorId = req.query.author_id;
         }
-       // Need to add condition to display general vs user's questions
+        // Finds all questions from all authors
         db.Question.findAll({
           where: query,
           include: [db.Author]
