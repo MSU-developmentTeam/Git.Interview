@@ -33,17 +33,17 @@ module.exports = function(sequelize, DataTypes) {
     );
   });
 
-  User.associate = function(models){
-      User.belongsTo(modles.Author, {
-          foreignKey:{
-              allowNull: false
-          }
-      });
+  // User.associate = function(models){
+  //     User.belongsTo(models.Author, {
+  //         foreignKey:{
+  //             allowNull: false
+  //         }
+  //     });
       
-      User.hasOne(models.Author,{
-          onDelete: "cascade"
-      });
-  };
+  //     User.hasOne(models.Author,{
+  //         onDelete: "cascade"
+  //     });
+  // };
 
   return User;
 };
