@@ -1,3 +1,127 @@
 {{!-- Index Handlebars file --}}
 {{!-- This is the main page when someone lands to our project --}}
-<h1>Index Page</h1>
+<div class="jumbotron">
+    <div>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="login.handlebars" role="button">Login</a>
+            <a class="btn btn-primary btn-lg" href="signup.handlebars" role="button">Signup</a>
+        </p>
+    </div>
+    <h1 class="display-4">Git.Interview</h1>
+    <p class="lead"></p>
+    <hr class="my-4">
+    <h3>Select a topic</h3>
+    {{!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/api/questions/:">JavaScript/jQuery</a>
+        <a class="dropdown-item" href="#">HTML</a>
+        <a class="dropdown-item" href="#">CSS</a>
+        <a class="dropdown-item" href="#">Node</a>
+        <a class="dropdown-item" href="#">MySql</a>
+        <a class="dropdown-item" href="#">Sequelize</a>
+        <a class="dropdown-item" href="#">RESTful Services</a>
+    </div> --}}
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+            <input type="radio" name="options" id="option" autocomplete="off" checked> JavaScript/ jQuery
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option" autocomplete="off"> HTML
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option" autocomplete="off"> CSS
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option" autocomplete="off"> Node
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option" autocomplete="off"> MySql
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option" autocomplete="off"> Sequelize
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option" autocomplete="off"> RESTful Services
+        </label>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                Top JavaScript Question
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">TOPIC HERE</h5>
+                <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sapiente
+                    debitis
+                    officiis optio eaque blanditiis corrupti inventore natus odio temporibus? Tenetur quia fuga
+                    perferendis.
+                    Optio a iure totam molestiae natus.</p>
+                <p>RATING</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Top JavaScript Question
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">TOPIC HERE</h5>
+                <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sapiente
+                    debitis
+                    officiis optio eaque blanditiis corrupti inventore natus odio temporibus? Tenetur quia fuga
+                    perferendis.
+                    Optio a iure totam molestiae natus.</p>
+                <p>RATING</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Top RESTful Services Question
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Name the protocol which is used by RESTful web services.</h5>
+                <p class="card-text"> RESTful web services use a famous web protocol i.e. HTTP protocol.
+                    This serves as a medium of data communication between client and server.
+                    HTTP standard methods are used to access resources in RESTful web service architecture.</p>
+                <p>RATING</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Top JavaScript Question
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">TOPIC HERE</h5>
+                <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sapiente
+                    debitis
+                    officiis optio eaque blanditiis corrupti inventore natus odio temporibus? Tenetur quia fuga
+                    perferendis.
+                    Optio a iure totam molestiae natus.</p>
+                <p>RATING</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Top JavaScript Question
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">TOPIC HERE</h5>
+                <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sapiente
+                    debitis
+                    officiis optio eaque blanditiis corrupti inventore natus odio temporibus? Tenetur quia fuga
+                    perferendis.
+                    Optio a iure totam molestiae natus.</p>
+                <p>RATING</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="sticky-footer" class="py-4 bg-dark">
+    <div class="container text-center">
+        <small>Copyright &copy; Your Website</small>
+    </div>
+</footer>
