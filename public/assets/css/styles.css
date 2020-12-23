@@ -1,1 +1,8 @@
 /* Styling css file for the project */
+.card{
+    margin: 1rem;
+}
+
+#sticky-footer{
+    color: white;
+}
