@@ -12,15 +12,6 @@ module.exports = function(app) {
     console.log('Index page');
   });
 
-  // Login route
-  // app.get("/login", function(req, res) {
-  //   // Replace with handlebars file    
-  //   //res.sendFile(path.join(__dirname, "../public/cms.html"));
-  //   res.render("login");
-  //   console.log('login page');
-    
-  // });
-
   // questions route
   app.get("/questions", function(req, res) {
     // Replace with handlebars file  
