@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   const Question = sequelize.define("Question", {
-    title: {
+    topic: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
