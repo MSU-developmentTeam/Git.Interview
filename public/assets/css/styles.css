@@ -1,8 +1,65 @@
 /* Styling css file for the project */
-.card{
-    margin: 1rem;
+body {
+    background-color: #A4B3BF;
 }
 
-#sticky-footer{
-    color: white;
+.jumbotron {
+    background-color: #0E2F56;
+    color: #CCD3D9;
+    font-family: 'Audiowide', cursive;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+img {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    display: block;
+}
+
+#login-btn {
+    float: right;
+    background-color: #A4B3BF;
+    color: #0F3759;
+    outline-color: #0F3759;
+    margin: 1px;
+}
+
+#signup-btn {
+    float: right;
+    background-color: #A4B3BF;
+    color: #0F3759;
+    outline-color: #0F3759;
+    margin: 1px;
+}
+
+.btn-group {
+    margin: 0 auto;
+    text-align: center;
+    width: inherit;
+    display: inline-block;
+}
+
+.card {
+    margin: 1rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #CCD3D9;
+    color: #0E2F56;
+}
+
+#sticky-footer {
+    background-color: #0E2F56;
+    color: #CCD3D9;
+    padding: 20px;
+}
+
+.footer_ul2_amrc {
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px;
 }
