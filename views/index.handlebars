@@ -2,10 +2,14 @@
 {{!-- This is the main page when someone lands to our project --}}
 <div class="jumbotron">
     <div>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="login.handlebars" role="button">Login</a>
-            <a class="btn btn-primary btn-lg" href="signup.handlebars" role="button">Signup</a>
-        </p>
+        <form class="lead" action="/login" method="GET">
+            <button class="btn btn-primary btn-lg">Login</button>
+            {{!-- <a href="{{login}}">{{login}}</a> --}}
+        </form>
+        <form class="lead" action="/signup" method="GET">
+            {{!-- <a href="{{login}}">{{login}}</a> --}}
+            <button class="btn btn-primary btn-lg">Signup</button>
+        </form>
     </div>
     <h1 class="display-4">Git.Interview</h1>
     <p class="lead"></p>

@@ -4,16 +4,18 @@ const passport = require("../config/passport");
 module.exports = function(app) {
 // Route to send user info from login to database
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
-    res.json({
-      username: req.user.username,
-      id: req.user.id
-    });
+    res.json(
+      req.user
+      // username: req.username,
+      // password: req.password
+    );
   });
 
   // Post Route to post user info to our DB
   app.post("/api/signup", (req, res) => {
     db.User.create({
       username: req.body.username,
+      email: req.body.email,
       password: req.body.password
     })
       .then(() => {

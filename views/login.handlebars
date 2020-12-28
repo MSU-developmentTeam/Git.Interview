@@ -1,19 +1,19 @@
 {{!-- Login page --}}
 {{!-- This is the page where a user that already has an account signs in --}}
-<div class="wrapper fadeInDown">
+<div>
   <div id="formContent">
     <!-- Tabs Titles -->
 
-    <!-- Icon -->
+    {{!-- <!-- Icon -->
     <div class="fadeIn first">
       <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-    </div>
+    </div> --}}
 
     <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
+    <form class="form-inline" action="/api/login" method="POST">
+      <input type="text" id="username" name="username" placeholder="username">
+      <input type="text" id="password" name="password" placeholder="password">
+      <input type="submit" value="Log In">
     </form>
 
     <!-- Remind Passowrd -->

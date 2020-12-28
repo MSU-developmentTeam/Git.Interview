@@ -1,3 +1,21 @@
 {{!-- Sign up page --}}
 {{!-- This is the page a new user signs up for an account --}}
-<p>Sign up</p>
+<div>
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        {{!-- <div class="fadeIn first">
+            <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+        </div> --}}
+
+        <!-- Login Form -->
+        <form class="form-inline" action="/api/signup" method="POST">
+            <input type="text" id="username" name="username" placeholder="username">
+            <input type="text" id="email" name="email" placeholder="email">
+            <input type="text" id="password" name="password" placeholder="password">
+            <input type="submit" value="Signup">
+        </form>
+
+    </div>
+</div>
