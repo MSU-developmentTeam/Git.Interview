@@ -18,10 +18,14 @@
                 Top JavaScript Question
             </div>
             <div class="card-body">
-                <h5 class="card-title">{{topic}}</h5>
-                <p class="card-text">{{body}}</p>
-                <button class="fa fa-thumbs-up"></button>
-                <button class="fa fa-thumbs-down"></button>
+                {{#each questions}}
+                <li class="card-title">{{topic}} {{body}}</h5>
+                    <form action="/api/questions" method="POST">
+                        <button class="fa fa-thumbs-up"></button>
+                        <button class="fa fa-thumbs-down"></button>
+                    </form>
+                </li>
+                {{/each}}
             </div>
         </div>
     </div>

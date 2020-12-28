@@ -1,54 +1,55 @@
 {{!-- Index Handlebars file --}}
 {{!-- This is the main page when someone lands to our project --}}
+{{!-- Start Jumbotron --}}
 <div class="jumbotron">
     <div>
+        {{!-- login button --}}
         <form class="lead" action="/login" method="GET">
-            <button class="btn btn-primary btn-lg">Login</button>
-            {{!-- <a href="{{login}}">{{login}}</a> --}}
+            <button class="btn btn-primary btn-lg" id="login-btn">Login</button>
         </form>
+        {{!-- signup button --}}
         <form class="lead" action="/signup" method="GET">
-            {{!-- <a href="{{login}}">{{login}}</a> --}}
-            <button class="btn btn-primary btn-lg">Signup</button>
+            <button class="btn btn-primary btn-lg" id="signup-btn">Signup</button>
         </form>
     </div>
-    <h1 class="display-4">Git.Interview</h1>
-    <p class="lead"></p>
-    <hr class="my-4">
-    <h3>Select a topic</h3>
-    {{!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="/api/questions/:">JavaScript/jQuery</a>
-        <a class="dropdown-item" href="#">HTML</a>
-        <a class="dropdown-item" href="#">CSS</a>
-        <a class="dropdown-item" href="#">Node</a>
-        <a class="dropdown-item" href="#">MySql</a>
-        <a class="dropdown-item" href="#">Sequelize</a>
-        <a class="dropdown-item" href="#">RESTful Services</a>
-    </div> --}}
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-secondary active">
-            <input type="radio" name="options" id="option" autocomplete="off" checked> JavaScript/ jQuery
-        </label>
-        <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option" autocomplete="off"> HTML
-        </label>
-        <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option" autocomplete="off"> CSS
-        </label>
-        <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option" autocomplete="off"> Node
-        </label>
-        <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option" autocomplete="off"> MySql
-        </label>
-        <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option" autocomplete="off"> Sequelize
-        </label>
-        <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option" autocomplete="off"> RESTful Services
-        </label>
+    <div class="container">
+        <img src="/assets/Images/Logos/linkedin_profile_image.png" alt="Logo image">
+        {{!-- <h1 class="display-4" id="site-title">Git.Interview</h1> --}}
+    </div>
+    {{!--
+    <hr class="my-4"> --}}
+    {{!-- Topic selection buttons --}}
+    <div class="container">
+        <div class="btn-group btn-group-toggle align-self-end" data-toggle="buttons">
+            <h3>Select a topic</h3>
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="option" autocomplete="off" checked> JavaScript/ jQuery
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> HTML
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> CSS
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> Node
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> MySql
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> Sequelize
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> RESTful Services
+            </label>
+        </div>
     </div>
 </div>
+</div>
+{{!-- End Jumbotron --}}
 
+{{!-- Start container with cards --}}
 <div class="container">
     <div class="row">
         <div class="card">
@@ -65,6 +66,7 @@
                 <p>RATING</p>
             </div>
         </div>
+
         <div class="card">
             <div class="card-header">
                 Top JavaScript Question
@@ -124,8 +126,34 @@
         </div>
     </div>
 </div>
-<footer id="sticky-footer" class="py-4 bg-dark">
+
+{{!-- Start Footer --}}
+<footer id="sticky-footer">
+    <div class="container bottom_border">
+        <div class="row">
+            <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Contact us</h5>
+                <p class="mb10">enxhi_salaj@yahoo.com</p>
+                <p class="mb10">...</p>
+                <p class="mb10">...</p>
+                <p class="mb10">...</p>
+                <p class="mb10">...</p>
+                <p class="mb10">...</p>
+            </div>
+            {{!-- Linkedin links of the development team --}}
+            <div class=" col-sm-4 col-md  col-12 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+            </div>
+        </div>
+    </div>
     <div class="container text-center">
-        <small>Copyright &copy; Your Website</small>
+        <small>Copyright &copy; Git.Interview</small>
     </div>
 </footer>
+{{!-- End Footer --}}
