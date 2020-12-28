@@ -35,9 +35,9 @@ module.exports = function (app) {
       res.json(req.user);
     }).catch(function (err) {
       res.status.json("404");
-    })
+    });
     //if (err) console.log("err");
-    
+
     //res.render("profile.handlebars");
-  })
-}
+  });
+};
