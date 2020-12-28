@@ -1,2 +1,28 @@
 {{!-- Profile Page --}}
-<p>Profile Page</p>
+<div class="jumbotron">
+
+    <form class="form-inline" action="/" method="GET">
+        <button type="text" id="logout" name="logout">Logout</button>
+    </form>
+
+    <form class="lead" action="/api/questions" method="GET">
+        <button class="btn btn-primary btn-lg">Post Questions</button>
+    </form>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                Top JavaScript Question
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{topic}}</h5>
+                <p class="card-text">{{body}}</p>
+                <button class="fa fa-thumbs-up"></button>
+                <button class="fa fa-thumbs-down"></button>
+            </div>
+        </div>
+    </div>
+</div>

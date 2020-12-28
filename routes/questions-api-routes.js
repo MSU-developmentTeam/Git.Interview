@@ -25,4 +25,19 @@ module.exports = function (app) {
     });
 
   });
+  // Not getting to this route. Pierce to ask learning assistant
+  app.post("/api/questions", function (req, res) {
+    console.log("Api Questions this far...")
+    db.Quesiton.create({
+      topic: req.body.topic,
+      body: req.body.body
+    }).then(function () {
+      res.json(req.user);
+    }).catch(function (err) {
+      res.status.json("404");
+    })
+    //if (err) console.log("err");
+    
+    //res.render("profile.handlebars");
+  })
 }

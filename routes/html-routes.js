@@ -13,10 +13,11 @@ module.exports = function(app) {
   });
 
   // questions route
-  app.get("/questions", function(req, res) {
+  app.get("/api/questions", function(req, res) {
     // Replace with handlebars file  
     //res.sendFile(path.join(__dirname, "../public/author-manager.html"));
     console.log('questions page');
+    res.render("question.handlebars");
   });
 
   // authors route
