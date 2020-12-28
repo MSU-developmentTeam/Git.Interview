@@ -1,14 +1,47 @@
 {{!-- Profile Page --}}
 <div class="jumbotron">
+    <div>
+        <form class="lead" action="/" method="GET">
+            <button class="logout-btn" type="text" id="logout" name="logout">Logout</button>
+        </form>
 
-    <form class="form-inline" action="/" method="GET">
-        <button type="text" id="logout" name="logout">Logout</button>
-    </form>
+        <form class="lead" action="/api/questions" method="GET">
+            <button class="post-btn">Post Questions</button>
+        </form>
+    </div>
+    <div class="container">
+        <img src="/assets/Images/Logos/linkedin_profile_image.png" alt="Logo image">
+        {{!-- <h1 class="display-4" id="site-title">Git.Interview</h1> --}}
+    </div>
 
-    <form class="lead" action="/api/questions" method="GET">
-        <button class="btn btn-primary btn-lg">Post Questions</button>
-    </form>
-
+    {{!-- Topic selection buttons --}}
+    <div class="container">
+        <div class="btn-group btn-group-toggle align-self-end" data-toggle="buttons">
+            <h3>Select a topic</h3>
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="option" autocomplete="off" checked> JavaScript/ jQuery
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> HTML
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> CSS
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> Node
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> MySql
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> Sequelize
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option" autocomplete="off"> RESTful Services
+            </label>
+        </div>
+    </div>
+</div>
 </div>
 
 <div class="container">
@@ -19,7 +52,8 @@
             </div>
             <div class="card-body">
                 {{#each questions}}
-                <li class="card-title">{{topic}} {{body}}</h5>
+                <li class="card-title">{{ topic }} </h5>
+                    <p class="card-body"> {{ body }}</p>
                     <form action="/api/questions" method="POST">
                         <button class="fa fa-thumbs-up"></button>
                         <button class="fa fa-thumbs-down"></button>
@@ -30,3 +64,35 @@
         </div>
     </div>
 </div>
+
+
+{{!-- Start Footer --}}
+<footer id="sticky-footer">
+    <div class="container bottom_border">
+        <div class="row">
+            <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Contact us</h5>
+                <p class="mb10">enxhi_salaj@yahoo.com</p>
+                <p class="mb10">...</p>
+                <p class="mb10">...</p>
+                <p class="mb10">...</p>
+                <p class="mb10">...</p>
+                <p class="mb10">...</p>
+            </div>
+            {{!-- Linkedin links of the development team --}}
+            <div class=" col-sm-4 col-md  col-12 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+                <p><a href="..."><i class="fab fa-linkedin"></i></a>...</p>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <small>Copyright &copy; Git.Interview</small>
+    </div>
+</footer>
+{{!-- End Footer --}}

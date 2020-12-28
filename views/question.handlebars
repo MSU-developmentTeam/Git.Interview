@@ -1,6 +1,13 @@
-<form class="lead" action="/api/questions" method="POST">
-       <input type="text" id="topic" name="topic" placeholder="topic">
-       <input type="text" id="body" name="body" placeholder="body">
-        {{!-- <button class="btn btn-primary btn-lg">Submit</button> --}}
-        <input type="submit" value="Question">
-    </form>
+{{!-- Questions Handlebars Code --}}
+<div class="wrapper">
+    <div id="formContent">
+        <!-- Post a Question Form -->
+        <p><i class="fa fa-question-circle" id="question-icon" style="font-size:42px"></i></p>
+        <form class="form-inline" action="/api/questions" method="POST">
+            <input type="text" id="topic" name="topic" placeholder="topic">
+            <input type="text" id="body" name="body" placeholder="body">
+            <input type="text" id="author" name="name" placeholder="name">
+            <input type="submit" value="Post">
+        </form>
+    </div>
+</div>

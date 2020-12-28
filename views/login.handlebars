@@ -1,15 +1,11 @@
 {{!-- Login page --}}
 {{!-- This is the page where a user that already has an account signs in --}}
-<div>
+<div class="wrapper">
   <div id="formContent">
     <!-- Tabs Titles -->
 
-    {{!-- <!-- Icon -->
-    <div class="fadeIn first">
-      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-    </div> --}}
-
     <!-- Login Form -->
+    <p><i class="fa fa-sign-in" id="login-icon" style="font-size:42px"></i></p>
     <form class="form-inline" action="/api/login" method="POST">
       <input type="text" id="username" name="username" placeholder="username">
       <input type="text" id="password" name="password" placeholder="password">
