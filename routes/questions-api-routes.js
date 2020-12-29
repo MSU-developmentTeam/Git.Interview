@@ -1,7 +1,18 @@
 const db = require('../models');
 
 module.exports = function (app) {
-  app.get("/api/questions", function (req, res) {
+  // Not getting to this route. Pierce to ask learning assistant
+  app.post("/api/questions", function (req, res) {
+    console.log("Api Questions this far...")
+    db.Question.create({
+      topic: req.body.topic,
+      body: req.body.body
+    }).then(function(){
+      res.redirect("/profile");
+    });
+  });
+
+  app.get("/questions", function (req, res) {
     const query = {};
     if (req.query.author_id) {
       query.AuthorId = req.query.author_id;
@@ -14,6 +25,7 @@ module.exports = function (app) {
       res.json(dbQuestion);
     });
   });
+
   app.get("/api/questions/:topic", function (req, res) {
     db.Question.findAll({
       where: {
@@ -23,21 +35,5 @@ module.exports = function (app) {
     }).then(function (dbQuestion) {
       res.json(dbQuestion);
     });
-
-  });
-  // Not getting to this route. Pierce to ask learning assistant
-  app.post("/api/questions", function (req, res) {
-    console.log("Api Questions this far...")
-    db.Quesiton.create({
-      topic: req.body.topic,
-      body: req.body.body
-    }).then(function () {
-      res.json(req.user);
-    }).catch(function (err) {
-      res.status.json("404");
-    });
-    //if (err) console.log("err");
-
-    //res.render("profile.handlebars");
   });
 };

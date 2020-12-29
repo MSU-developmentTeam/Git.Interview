@@ -1,6 +1,3 @@
-// Dependencies
-var path = require("path");
-
 // Routes
 module.exports = function(app) {
 
@@ -13,9 +10,8 @@ module.exports = function(app) {
   });
 
   // questions route
-  app.get("/api/questions", function(req, res) {
-    // Replace with handlebars file  
-    //res.sendFile(path.join(__dirname, "../public/author-manager.html"));
+  app.get("/questions", function(req, res) {
+    //Renders Questions handlebars page
     console.log('questions page');
     res.render("question.handlebars");
   });
@@ -23,7 +19,6 @@ module.exports = function(app) {
   // authors route
   app.get("/authors", function(req, res) {
     // Replace with handlebars file    
-    //res.sendFile(path.join(__dirname, "../public/blog.html"));
     console.log('Authors page');
   });
 
