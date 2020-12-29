@@ -191,6 +191,15 @@ a {
     margin: 10px;
 }
 
+#signup-icon{
+    color: #0F3759;
+    margin: 10px;
+}
+
+#question-icon{
+    color: #0F3759;
+    margin: 10px;
+}
 /* Profile page style */
 .logout-btn {
     float: right;
