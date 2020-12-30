@@ -12,14 +12,6 @@ module.exports = function(app) {
   // questions route
   app.get("/questions", function(req, res) {
     //Renders Questions handlebars page
-    console.log('questions page');
     res.render("question.handlebars");
   });
-
-  // authors route
-  app.get("/authors", function(req, res) {
-    // Replace with handlebars file    
-    console.log('Authors page');
-  });
-
 };

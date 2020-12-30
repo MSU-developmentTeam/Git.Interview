@@ -14,13 +14,13 @@ module.exports = function (app) {
 
   app.get("/questions", function (req, res) {
     const query = {};
-    if (req.query.author_id) {
-      query.AuthorId = req.query.author_id;
+    if (req.query.username) {
+      query.Username = req.query.username;
     }
     // Finds all questions from all authors
     db.Question.findAll({
       where: query,
-      include: [db.Author]
+      include: [db.User]
     }).then(function (dbQuestion) {
       res.json(dbQuestion);
     });
@@ -31,7 +31,7 @@ module.exports = function (app) {
       where: {
         topic: req.params.topic
       },
-      include: [db.Author]
+      include: [db.User]
     }).then(function (dbQuestion) {
       res.json(dbQuestion);
     });
