@@ -13,7 +13,7 @@ module.exports = function (app) {
     // Render login Handlebars page
     res.render("login.handlebars");
     console.log('Login Page');
-    console.log(isEmail + "This far");
+    
   });
 
   app.get("/signup", (req, res) => {

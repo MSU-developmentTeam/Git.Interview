@@ -3,8 +3,10 @@ const db = require('../models');
 module.exports = function (app) {
   // Not getting to this route. Pierce to ask learning assistant
   app.post("/api/questions", function (req, res) {
-    console.log("Api Questions this far...")
+    console.log("Api Questions this far...");
+    console.log(req.user);
     db.Question.create({
+      UserId: req.user.id,
       topic: req.body.topic,
       body: req.body.body
     }).then(function(){
