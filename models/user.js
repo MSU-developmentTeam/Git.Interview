@@ -38,12 +38,11 @@ module.exports = function (sequelize, DataTypes) {
     );
   });
 
-  User.associate = function (models) {
-    // Associate the User with the author
-    User.hasOne(models.Author, {
+  User.associate= function (models) {
+    User.hasMany(models.Question, {
       onDelete: "cascade"
     });
-  };
+  }
 
   return User;
 };
