@@ -1,8 +1,9 @@
+
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-
+const isEmail = require('../models/user');
 module.exports = function (app) {
-
+  
   app.get("/login", (req, res) => {
     // If the user already has an account send them to the home page
     if (req.user) {
@@ -12,6 +13,7 @@ module.exports = function (app) {
     // Render login Handlebars page
     res.render("login.handlebars");
     console.log('Login Page');
+    console.log(isEmail + "This far");
   });
 
   app.get("/signup", (req, res) => {
@@ -19,9 +21,12 @@ module.exports = function (app) {
     if (req.user) {
       res.redirect("/profile");
       console.log('Welcome Member Login');
+    } else if (!isEmail) {
+      console.log('Enter valid email')
+      res.render("signup.handlebars");
     }
     // Render Handlebars page
-    res.render("signup.handlebars");
+    res.render("signup.handlebars")
     console.log('Signup Page');
   });
 
