@@ -35,11 +35,9 @@ module.exports = function (app) {
     console.log(req.query)
     let { topic } = req.query;
 
-    topic = topic.toLowerCase();
-
     db.Question.findAll({ 
     where: { topic: { [Op.like]: topic } },
-    include: [db.body && db.User]
+    include: [db.Question && db.User]
     }).then(topic => res.render('searchResults', { topic }))
   })
 
