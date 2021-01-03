@@ -21,7 +21,7 @@ As a user, I want to be able to vote on which solution is most helpful.
 
 ```
 ## Technology
-This application was built with:
+    This application was built with:
     * JavaScript
     * Node.js
     * Express
@@ -67,6 +67,7 @@ This application was built with:
     Sam     sambishop3015@hotmail.com
     Alex    tatum_alex@gmail.com
     Muneeb  muneebbwp@gmail.com
+
 ## Project Criteria 
 * View public page
 * Select topics of interest (drop-down)
