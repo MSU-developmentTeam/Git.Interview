@@ -1,42 +1,18 @@
 # Git.Interview
 
-## Application Overview
+## Description
 
-* Must use a Node and Express server   
+## Table of Content
+ 1. [Usage](#usage)
+ 2. [Technology](#technology)
+ 3. [Installation](#installation)
+ 4. [Links](#links)
+ 5. [Image](#image)
+ 6. [Contribution](#contribution)
+ 7. [Licence](#licence)
+ 8. [Questions](#questions)
 
-* Must use Handlebars.js as the template engine 
-
-* Must be backed by a MySQL database with a Sequelize ORM
-
-* Must utilize both GET and POST routes for retrieving and adding new data
-    - Post interview questions
-    - Post interview solutions
-
-* Must be deployed using Heroku (with data)
-
-* Utilizes a new package that we haven’t discussed 
-    * Usage: email validation
-        - ` npm i validate-email-node-js `
-        - The function signature accepts an arguments and returns a boolean value.
-        - true (boolean) valid email address.
-        - false (boolean) invalid email address.
-        ```
-        Example:
-        const validateEmail = require('validate-email-node-js');
-        const result = validateEmail.validate('mail@example.com');
-        
-        ```
-
-* Must have a polished front end/UI
-
-* Must have a folder structure that meets the MVC paradigm
-
-* Must meet good quality coding standards (indentation, scoping, naming)
-
-* Must protect API keys in Node with environment variables
-
-## User-story
-
+## Usage
 ```
 As a developer
 I want to prep for future interviews,
@@ -44,7 +20,53 @@ By having quick access to popular interview questions, along with different solu
 As a user, I want to be able to vote on which solution is most helpful.
 
 ```
+## Technology
+This application was built with:
+    * JavaScript
+    * Node.js
+    * Express
+    * Handlebars
+    * Sequelize
+    * MySQL
+    * Heroku
+    * HTML
+    * Bootstrap 
+    * Color Adobe
+    * Hatchful
+    * email-validator
+    * Passport Authentication 
+    * eslint
+    * bcryptjs
 
+## Installation
+    * Make sure you have node installed in your machine and have cloned this repo.
+    * Run : ```npm install``` in order to install all dependencies 
+    * Run : ```node server.js``` and the application will start 
+    * Navigate to the localhost port: http://localhost:8080 in the browser.
+
+## Links
+
+## Image
+
+## Contribution
+    * Enxhi Salaj
+    * Pierce Rogg
+    * Marlee Eyre
+    * Sam Bishop
+    * Alex Tatum
+    * Muneeb Ali
+    
+## Licence 
+![License badge](https://img.shields.io/badge/license-MIT-green)
+
+## Questions
+    * If you have any questions, email any memmber of the development team at:
+    Enxhi   enxhi_salaj@yahoo.com
+    Pierce  roggpierce@gmail.com
+    Marlee  marlee.eyre@gmail.com
+    Sam     sambishop3015@hotmail.com
+    Alex    tatum_alex@gmail.com
+    Muneeb  muneebbwp@gmail.com
 ## Project Criteria 
 * View public page
 * Select topics of interest (drop-down)
