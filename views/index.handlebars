@@ -16,13 +16,15 @@
         <img src="/assets/Images/Logos/linkedin_profile_image.png" alt="Logo image">
         {{!-- <h1 class="display-4" id="site-title">Git.Interview</h1> --}}
     </div>
-    <section id='search' class='container search-wrap'>
+    <section id='search' class='container'>
+        <div class="search-wrapper">
         <h3>Select A Topic</h3>
-        <form action="/questions/search" class="search-form">
-            <i class="fas fa-search"></i>
-            <input type="search" name="topic" placeholder="JavaScript, HTML, CSS, Node, MySQL, Sequelize or Restful Services">
-            <input type="submit" value="Search">
-        </form>
+            <form action="/questions/search" class="search-form">
+                <i class="fas fa-search"></i>
+                <input type="search" name="topic" placeholder="JavaScript, HTML, CSS, Node, MySQL, Sequelize or Restful Services">
+                <input type="submit" value="Search">
+            </form>
+        </div>
     </section>
     {{!--
     <hr class="my-4"> --}}
