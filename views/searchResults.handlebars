@@ -1,59 +1,20 @@
-{{!-- Profile Page --}}
+{{!-- Search Results Page --}}
 <div class="jumbotron">
-    <div>
-        <form class="lead" action="/logout" method="GET">
-            <button class="logout-btn" type="text" id="logout" name="logout">Logout</button>
-        </form>
-
-        <form class="lead" action="/questions" method="GET">
-            <button class="post-btn">Post Questions</button>
-        </form>
-    </div>
     <div class="container">
         <img src="/assets/Images/Logos/linkedin_profile_image.png" alt="Logo image">
         {{!-- <h1 class="display-4" id="site-title">Git.Interview</h1> --}}
-    </div>
-
-    {{!-- Topic selection buttons --}}
-    <div class="container">
-        <div class="btn-group btn-group-toggle align-self-end" data-toggle="buttons">
-            <h3>Select a topic</h3>
-            <label class="btn btn-secondary active">
-                <input type="radio" name="options" id="option" autocomplete="off" checked> JavaScript/ jQuery
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option" autocomplete="off"> HTML
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option" autocomplete="off"> CSS
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option" autocomplete="off"> Node
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option" autocomplete="off"> MySql
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option" autocomplete="off"> Sequelize
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option" autocomplete="off"> RESTful Services
-            </label>
-        </div>
-    </div>
-</div>
-</div>
+    </div>    
 
 {{#each questions}}
-    <div class="container questions ">
+    <div class="container questions">
         <div class="row">
             <div class="card">
                 <div class="card-header">
-                    Your Submitted Questions
+                    Submitted Questions
                 </div>
                 <div class="card-body">
-                    <li class="card-title">{{ topic }} </h5>
-                        <p class="card-body"> {{ body }}</p>
+                    <li class="card-title">{{topic}} </h5>
+                        <p class="card-body"> {{body}}</p>
                         <button class="fa fa-thumbs-up"></button>
                         <button class="fa fa-thumbs-down"></button>
                     </li>

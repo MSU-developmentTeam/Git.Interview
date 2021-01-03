@@ -1,4 +1,6 @@
 const db = require('../models');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 module.exports = function (app) {
   // Not getting to this route. Pierce to ask learning assistant
@@ -27,6 +29,19 @@ module.exports = function (app) {
       res.json(dbQuestion);
     });
   });
+
+  app.get('/questions/search', function(req, res) {
+    console.log('This Far ...');
+    console.log(req.query)
+    let { topic } = req.query;
+
+    topic = topic.toLowerCase();
+
+    db.Question.findAll({ 
+    where: { topic: { [Op.like]: topic } },
+    include: [db.body && db.User]
+    }).then(topic => res.render('searchResults', { topic }))
+  })
 
   app.get("/api/questions/:topic", function (req, res) {
     db.Question.findAll({
