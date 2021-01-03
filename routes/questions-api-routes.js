@@ -34,21 +34,25 @@ module.exports = function (app) {
     console.log('This Far ...');
     console.log(req.query)
     let { topic } = req.query;
-
+    console.log(topic);
+    
     db.Question.findAll({ 
     where: { topic: { [Op.like]: topic } },
     include: [db.Question && db.User]
-    }).then(topic => res.render('searchResults', { topic }))
-  })
-
-  app.get("/api/questions/:topic", function (req, res) {
-    db.Question.findAll({
-      where: {
-        topic: req.params.topic
-      },
-      include: [db.User]
-    }).then(function (dbQuestion) {
-      res.json(dbQuestion);
+    }).then(function(topic) {
+      console.log(topic)
+      res.render('searchResults', { topic })
     });
   });
+
+//   app.get("/api/questions/:topic", function (req, res) {
+//     db.Question.findAll({
+//       where: {
+//         topic: req.params.topic
+//       },
+//       include: [db.User]
+//     }).then(function (dbQuestion) {
+//       res.json(dbQuestion);
+//     });
+//   });
 };
