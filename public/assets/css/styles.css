@@ -52,6 +52,14 @@ img {
     color: #0E2F56;
 }
 
+.card-body {
+    color: #0E2F56;
+}
+
+.card-title {
+    color: #0E2F56;
+}
+
 #sticky-footer {
     background-color: #0E2F56;
     color: #CCD3D9;
@@ -147,7 +155,8 @@ input[type=reset]:active {
     transform: scale(0.95);
 }
 
-input[type=text], input[type=password] {
+input[type=text],
+input[type=password] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
@@ -170,12 +179,14 @@ input[type=text], input[type=password] {
     border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus,
+input[type=password]:focus {
     background-color: #fff;
     border-bottom: 2px solid #0F3759;
 }
 
-input[type=text]:placeholder, input[type=password]:placeholder {
+input[type=text]:placeholder,
+input[type=password]:placeholder {
     color: #cccccc;
 }
 
@@ -191,15 +202,16 @@ a {
     margin: 10px;
 }
 
-#signup-icon{
+#signup-icon {
     color: #0F3759;
     margin: 10px;
 }
 
-#question-icon{
+#question-icon {
     color: #0F3759;
     margin: 10px;
 }
+
 /* Profile page style */
 .logout-btn {
     float: right;
@@ -217,14 +229,18 @@ a {
     margin: 1px;
 }
 
-.fa-thumbs-up{
+.fa-thumbs-up {
     color: #0F3759;
 }
 
-.fa-thumbs-down{
+.fa-thumbs-down {
     color: #0F3759;
 }
 
 #linkedIn {
     height: 15px;
+}
+
+.fa-search{
+    color: #A4B3BF;
 }
