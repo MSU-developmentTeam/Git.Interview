@@ -11,6 +11,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
+    },
+    answer: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      len: [0]
     }
   });
 
