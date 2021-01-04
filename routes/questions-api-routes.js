@@ -44,7 +44,7 @@ module.exports = function (app) {
     // console.log('This Far ...');
     // console.log(req.query)
     let { topic } = req.query;
-    console.log(topic);
+    //console.log(topic);
     
     db.Question.findAll({ 
     where: { topic: { [Op.like]: topic } },
