@@ -4,26 +4,31 @@
         <img src="/assets/Images/Logos/linkedin_profile_image.png" alt="Logo image">
         {{!-- <h1 class="display-4" id="site-title">Git.Interview</h1> --}}
     </div>    
-
-{{#each questions}}
-    <div class="container questions">
-        <div class="row">
-            <div class="card">
-                <div class="card-header">
-                    Submitted Questions
-                </div>
-                <div class="card-body">
-                    <li class="card-title">{{topic}} </h5>
-                        <p class="card-body"> {{this.body}}</p>
-                        <button class="fa fa-thumbs-up"></button>
-                        <button class="fa fa-thumbs-down"></button>
-                    </li>
+</div>
+    <div class="container">
+        {{#each Question}}
+            <div class="Question">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-header">
+                            Submitted Questions
+                        </div>
+                        <div class="card-body">
+                            {{!-- <form action="/questions/search/:topic" method="GET"> --}}
+                            <li class="card-title">{{question.topic}} </h5>
+                                <p class="card-body"> {{Question.body}}</p>
+                                <button class="fa fa-thumbs-up"></button>
+                                <button class="fa fa-thumbs-down"></button>
+                            </li>
+                            {{!-- </form> --}}
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            {{else}}
+            <p>No questions available</p>
+        {{/each}}
     </div>
-{{/each}}
-
 
 {{!-- Start Footer --}}
 <footer id="sticky-footer">

@@ -25,7 +25,6 @@
     </section>
 </div>
 
-{{#each questions}}
     <div class="container questions ">
         <div class="row">
             <div class="card">
@@ -33,16 +32,17 @@
                     Your Submitted Questions
                 </div>
                 <div class="card-body">
+                {{#each questions}}
                     <li class="card-title">{{ topic }} </h5>
-                        <p class="card-body"> {{ body }}</p>
+                        <p class="card-body"> {{ this.body }}</p>
                         <button class="fa fa-thumbs-up"></button>
                         <button class="fa fa-thumbs-down"></button>
                     </li>
+                {{/each}}
                 </div>
             </div>
         </div>
     </div>
-{{/each}}
 
 
 {{!-- Start Footer --}}
