@@ -3,30 +3,34 @@
     <div class="container">
         <img src="/assets/Images/Logos/linkedin_profile_image.png" alt="Logo image">
         {{!-- <h1 class="display-4" id="site-title">Git.Interview</h1> --}}
-    </div>    
+    </div>
 </div>
-    <div class="container">
-        {{#each Question}}
-            <div class="Question">
-                <div class="row">
-                    <div class="card">
-                        <div class="card-header">
-                            Submitted Questions
-                        </div>
-                        <div class="card-body">
-                            {{!-- <form action="/questions/search/:topic" method="GET"> --}}
-                            <li class="card-title">{{Question.dataValues.topic}} </h5>
-                                <p class="card-body"> {{Question.dataValues.body}}</p>
-                                <button class="fa fa-thumbs-up"></button>
-                                <button class="fa fa-thumbs-down"></button>
-                            </li>
-                            {{!-- </form> --}}
-                        </div>
-                    </div>
+<div class="container">
+    {{!-- {{#each Question}} --}}
+    <div class="Question">
+        <div class="row">
+            <div class="card">
+                <div class="card-header">
+                    Submitted Questions
+                </div>
+                <div class="card-body">
+                    {{#each Question}}
+                    {{!-- <form action="/questions/search/:topic" method="GET"> --}}
+                        <li class="card-title">{{ this.dataValues.topic }}</h5>
+                            <p class="card-body">Question: {{ this.dataValues.body }}</p>
+                            <p class="card-body">Answer: {{ this.dataValues.answer }}</p>
+                            <button class="fa fa-thumbs-up"></button>
+                            <button class="fa fa-thumbs-down"></button>
+                        </li>
+                        {{/each}}
+                        {{!--
+                    </form> --}}
                 </div>
             </div>
-        {{/each}}
+        </div>
     </div>
+    {{!-- {{/each}} --}}
+</div>
 
 {{!-- Start Footer --}}
 <footer id="sticky-footer">
@@ -44,12 +48,18 @@
             {{!-- Linkedin links of the development team --}}
             <div class=" col-sm-4 col-md  col-12 col">
                 <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
-                <p><a href="https://www.linkedin.com/in/enxhi-salaj-09a859173/"><i class="fa fa-linkedin fa-inverse" id='linkedIn'>   Enxhi Salaj</i></a></p>
-                <p><a href="https://www.linkedin.com/in/pierce-rogg"><i class="fa fa-linkedin fa-inverse">   Pierce Rogg</i></a></p>
-                <p><a href="https://www.linkedin.com/in/sambishop3015/"><i class="fa fa-linkedin fa-inverse" id='linkedIn'>   Sam Bishop</i></a></p>
-                <p><a href="https://www.linkedin.com/in/alex-tatum-84330a1b3"><i class="fa fa-linkedin fa-inverse" id='linkedIn'>   Alex Tatum</i></a></p>
-                <p><a href="https://www.linkedin.com/in/marlee-eyre-cnmt-b4919686/"><i class="fa fa-linkedin fa-inverse" id='linkedIn'>   Marlee Eyre</i></a></p>
-                <p><a href="https://www.linkedin.com/in/muneebbwp"><i class="fa fa-linkedin fa-inverse" id='linkedIn'>   Muneeb Ali</i></a></p>
+                <p><a href="https://www.linkedin.com/in/enxhi-salaj-09a859173/"><i class="fa fa-linkedin fa-inverse"
+                            id='linkedIn'> Enxhi Salaj</i></a></p>
+                <p><a href="https://www.linkedin.com/in/pierce-rogg"><i class="fa fa-linkedin fa-inverse"> Pierce
+                            Rogg</i></a></p>
+                <p><a href="https://www.linkedin.com/in/sambishop3015/"><i class="fa fa-linkedin fa-inverse"
+                            id='linkedIn'> Sam Bishop</i></a></p>
+                <p><a href="https://www.linkedin.com/in/alex-tatum-84330a1b3"><i class="fa fa-linkedin fa-inverse"
+                            id='linkedIn'> Alex Tatum</i></a></p>
+                <p><a href="https://www.linkedin.com/in/marlee-eyre-cnmt-b4919686/"><i class="fa fa-linkedin fa-inverse"
+                            id='linkedIn'> Marlee Eyre</i></a></p>
+                <p><a href="https://www.linkedin.com/in/muneebbwp"><i class="fa fa-linkedin fa-inverse" id='linkedIn'>
+                            Muneeb Ali</i></a></p>
             </div>
         </div>
     </div>
