@@ -51,7 +51,7 @@ module.exports = function (app) {
     include: [db.User]
     }).then(function(topic) {
       console.log(topic)
-      res.render('searchResults', { topic })
+      res.render('searchResults', { Question: topic })
     }).catch(function(err) {
       console.log(err);
     });
