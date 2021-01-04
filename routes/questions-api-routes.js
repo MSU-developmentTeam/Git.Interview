@@ -50,7 +50,7 @@ module.exports = function (app) {
     where: { topic: { [Op.like]: topic } },
     include: [db.User]
     }).then(function(topic) {
-      //console.log(topic)
+      console.log(topic)
       res.render('searchResults', { topic })
     }).catch(function(err) {
       console.log(err);
