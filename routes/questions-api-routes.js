@@ -3,10 +3,8 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 module.exports = function (app) {
-  // Not getting to this route. Pierce to ask learning assistant
   app.post("/api/questions", function (req, res) {
-    console.log("Api Questions this far...");
-    console.log(req.user);
+    //console.log(req.user);
     db.Question.create({
       UserId: req.user.id,
       topic: req.body.topic,
@@ -17,34 +15,19 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/api/questions", function (req, res) {
-    const query = {};
-    console.log(req.query.username)
-    if (req.query.username) {
-      console.log('Inside IF')
-      query.Username = req.query.username;
-      db.Question.findAll({
-        where: query,
-        include: [db.User]
-      }).then(function (dbQuestion) {
-        res.json(dbQuestion);
-      });
-    }
-    console.log('Outside IF')
-    // Finds all questions from all authors
-    db.Question.findAll({
-      where: query,
-      include: [db.User]
-    }).then(function (dbQuestion) {
-      res.json(dbQuestion);
-    });
-  });
-  // Search form
+  // app.get("/questions/showall", function (req, res) {
+  //   console.log("/questions ROUTE");
+  //   // Finds all questions from all users
+  //   db.Question.findAll({}).then(function () {
+  //     //res.json(dbQuestion);
+  //     res.render('profile');
+  //   });
+  // });
+
+  // Search form route
   app.get('/questions/search', function(req, res) {
-    // console.log('This Far ...');
-    // console.log(req.query)
     let { topic } = req.query;
-    console.log(topic);
+    //console.log(topic);
     
     db.Question.findAll({ 
     where: { topic: { [Op.like]: topic } },
@@ -56,14 +39,4 @@ module.exports = function (app) {
       console.log(err);
     });
   });
-
-  // app.get("questions/:topic", function (req, res) {
-  //   db.Question.findAll({
-  //     where: { topic: { [Op.like]: topic } },
-  //   include: [db.Question && db.User]
-  //   }).then(function(topic) {
-  //     console.log(topic)
-  //     res.render('searchResults', { topic })
-  //   });
-  // });
 };

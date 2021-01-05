@@ -4,7 +4,8 @@ const passport = require("../config/passport");
 module.exports = function(app) {
 // Route to send user info from login to database
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
-    res.render("profile.handlebars");    
+    //res.render("profile.handlebars");   
+    res.redirect("/profile"); 
   });
 
   // Post Route to post user info to our DB
