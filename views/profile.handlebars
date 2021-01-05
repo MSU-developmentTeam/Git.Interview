@@ -25,28 +25,51 @@
         </div>
     </section>
 </div>
-
+{{!-- 
 <div class="container questions ">
     <div class="row">
         <div class="card">
             <div class="card-header">
                 Your Submitted Questions
             </div>
-            <div class="card-body">
-                {{#each Question}}
-                <form action="/api/questions" method="GET">
-                    <li class="card-title">Topic: {{ this.dataValues.topic }}</h5>
+            {{!-- <form action="/questions/showall" method="GET"> --}}
+                <div class="card-body">
+                    {{!-- {{#each Question}} --}}
+                    {{!-- <li class="card-title"> {{ this.topic }}</h5>
                         <p class="card-body">Question: {{ this.dataValues.body }}</p>
                         <p class="card-body">Answer: {{ this.dataValues.answer }}</p>
                         <button class="fa fa-thumbs-up"></button>
                         <button class="fa fa-thumbs-down"></button>
                     </li>
-                </form>
-                {{/each}}
+                    {{!-- {{/each}} --}}
+                {{!-- </div> --}} 
+                {{!--
+            </form> --}}
+        {{!-- </div>
+    </div>
+</div> --}}
+ <div class="Question">
+        <div class="row">
+            <div class="card">
+                <div class="card-header">
+                    Submitted Questions
+                </div>
+                <div class="card-body">
+                    {{#each Question}}
+                    {{!-- <form action="/questions/search/:topic" method="GET"> --}}
+                        <li class="card-title">{{ this.dataValues.topic }}</h5>
+                            <p class="card-body">Question: {{ this.dataValues.body }}</p>
+                            <p class="card-body">Answer: {{ this.dataValues.answer }}</p>
+                            <button class="fa fa-thumbs-up"></button>
+                            <button class="fa fa-thumbs-down"></button>
+                        </li>
+                        {{/each}}
+                        {{!--
+                    </form> --}}
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 {{!-- Start Footer --}}
