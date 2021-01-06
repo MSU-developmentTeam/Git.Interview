@@ -1,4 +1,6 @@
 /* Styling css file for the project */
+
+/* Index file styling */
 body {
     background-color: #A4B3BF;
 }
@@ -52,10 +54,10 @@ img {
     color: #0E2F56;
 }
 
-#space{
-   margin-bottom: 1rem; 
-   background-color: #0E2F56;
-   height: 5px;
+#space {
+    margin-bottom: 1rem;
+    background-color: #0E2F56;
+    height: 5px;
 }
 
 .card-body {
@@ -247,7 +249,7 @@ a {
     height: 15px;
 }
 
-.fa-search{
+.fa-search {
     color: #A4B3BF;
 }
 

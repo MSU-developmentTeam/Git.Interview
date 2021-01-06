@@ -3,6 +3,7 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 module.exports = function (app) {
+  // POST route to create new Question in the db
   app.post("/api/questions", function (req, res) {
     //console.log(req.user);
     db.Question.create({
@@ -15,20 +16,11 @@ module.exports = function (app) {
     });
   });
 
-  // app.get("/questions/showall", function (req, res) {
-  //   console.log("/questions ROUTE");
-  //   // Finds all questions from all users
-  //   db.Question.findAll({}).then(function () {
-  //     //res.json(dbQuestion);
-  //     res.render('profile');
-  //   });
-  // });
-
   // Search form route
   app.get('/questions/search', function(req, res) {
     let { topic } = req.query;
-    //console.log(topic);
     
+    // finds all questions where topic matches the selected topic
     db.Question.findAll({ 
     where: { topic: { [Op.like]: topic } },
     include: [db.User]

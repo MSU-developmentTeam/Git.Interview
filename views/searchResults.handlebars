@@ -1,4 +1,5 @@
 {{!-- Search Results Page --}}
+{{!-- Start Jumbotron --}}
 <div class="jumbotron">
     <div>
         <form class="lead" action="/profile" method="GET">
@@ -12,8 +13,10 @@
     <div class="container">
         <img src="/assets/Images/Logos/linkedin_profile_image.png" alt="Logo image">
     </div>
-
 </div>
+{{!-- End Jumbotron --}}
+
+{{!-- Start container with searched question's cards --}}
 <div class="container">
     <div class="Question">
         <div class="row">
@@ -21,11 +24,8 @@
                 <div class="card-header">
                     Submitted Questions
                 </div>
-
                 <div class="card-body">
-                {{#each Question}}
- 
-
+                    {{#each Question}}
                     <li class="card-title">{{ this.dataValues.topic }}</h5>
                         <p class="card-body">Question: {{ this.dataValues.body }}</p>
                         <p class="card-body">Answer: {{ this.dataValues.answer }}</p>
@@ -35,14 +35,13 @@
                     </div>
                     {{else}}
                     <p>No questions with this topic</p>
-
-                
-                {{/each}}
+                    {{/each}}
                 </div>
             </div>
         </div>
     </div>
 </div>
+{{!-- End Container --}}
 
 {{!-- Start Footer --}}
 <footer id="sticky-footer">
