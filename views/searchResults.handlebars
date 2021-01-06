@@ -1,35 +1,47 @@
 {{!-- Search Results Page --}}
 <div class="jumbotron">
+    <div>
+        <form class="lead" action="/profile" method="GET">
+            <button class="profile-btn" type="text" id="profile" name="profile">Back to Profile</button>
+        </form>
+
+        <form class="lead" action="/questions" method="GET">
+            <button class="post-btn">Post Questions</button>
+        </form>
+    </div>
     <div class="container">
         <img src="/assets/Images/Logos/linkedin_profile_image.png" alt="Logo image">
-        {{!-- <h1 class="display-4" id="site-title">Git.Interview</h1> --}}
     </div>
+
 </div>
 <div class="container">
-    {{!-- {{#each Question}} --}}
     <div class="Question">
         <div class="row">
             <div class="card">
                 <div class="card-header">
                     Submitted Questions
                 </div>
+
                 <div class="card-body">
-                    {{#each Question}}
-                    {{!-- <form action="/questions/search/:topic" method="GET"> --}}
-                        <li class="card-title">{{ this.dataValues.topic }}</h5>
-                            <p class="card-body">Question: {{ this.dataValues.body }}</p>
-                            <p class="card-body">Answer: {{ this.dataValues.answer }}</p>
-                            <button class="fa fa-thumbs-up"></button>
-                            <button class="fa fa-thumbs-down"></button>
-                        </li>
-                        {{/each}}
-                        {{!--
-                    </form> --}}
+                {{#each Question}}
+ 
+
+                    <li class="card-title">{{ this.dataValues.topic }}</h5>
+                        <p class="card-body">Question: {{ this.dataValues.body }}</p>
+                        <p class="card-body">Answer: {{ this.dataValues.answer }}</p>
+                    </li>
+                    <div id="space">
+                        <hr>
+                    </div>
+                    {{else}}
+                    <p>No questions with this topic</p>
+
+                
+                {{/each}}
                 </div>
             </div>
         </div>
     </div>
-    {{!-- {{/each}} --}}
 </div>
 
 {{!-- Start Footer --}}

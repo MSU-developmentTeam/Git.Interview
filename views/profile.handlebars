@@ -15,7 +15,7 @@
     </div>
     <section id='search' class='container'>
         <div class="search-wrapper">
-            <h3>Select A Topic</h3>
+            <h3>Search A Topic</h3>
             <form action="/questions/search" class="search-form">
                 <i class="fa fa-search" style="font-size:24px"></i>
                 <input type="search" name="topic"
@@ -25,53 +25,33 @@
         </div>
     </section>
 </div>
-{{!-- 
-<div class="container questions ">
-    <div class="row">
-        <div class="card">
-            <div class="card-header">
-                Your Submitted Questions
-            </div>
-            {{!-- <form action="/questions/showall" method="GET"> --}}
-                <div class="card-body">
-                    {{!-- {{#each Question}} --}}
-                    {{!-- <li class="card-title"> {{ this.topic }}</h5>
-                        <p class="card-body">Question: {{ this.dataValues.body }}</p>
-                        <p class="card-body">Answer: {{ this.dataValues.answer }}</p>
-                        <button class="fa fa-thumbs-up"></button>
-                        <button class="fa fa-thumbs-down"></button>
-                    </li>
-                    {{!-- {{/each}} --}}
-                {{!-- </div> --}} 
-                {{!--
-            </form> --}}
-        {{!-- </div>
-    </div>
-</div> --}}
- <div class="Question">
+<div class="container">
+    <div class="Question">
         <div class="row">
             <div class="card">
                 <div class="card-header">
                     Submitted Questions
                 </div>
-                <div class="card-body">
-                    {{#each Question}}
-                    {{!-- <form action="/questions/search/:topic" method="GET"> --}}
+                {{#each Question}}
+                <div>
+                    <div class="card-body">
+                        {{!-- Displaying Questions posted by the User --}}
+
                         <li class="card-title">{{ this.dataValues.topic }}</h5>
+                            <hr>
                             <p class="card-body">Question: {{ this.dataValues.body }}</p>
                             <p class="card-body">Answer: {{ this.dataValues.answer }}</p>
-                            <button class="fa fa-thumbs-up"></button>
-                            <button class="fa fa-thumbs-down"></button>
                         </li>
-                        {{/each}}
-                        {{!--
-                    </form> --}}
+                    </div>
+                    <div id="space">
+                        <hr>
+                    </div>
                 </div>
+                {{/each}}
             </div>
         </div>
     </div>
-
-
+</div>
 {{!-- Start Footer --}}
 <footer id="sticky-footer">
     <div class="container bottom_border">

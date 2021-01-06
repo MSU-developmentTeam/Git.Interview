@@ -52,6 +52,12 @@ img {
     color: #0E2F56;
 }
 
+#space{
+   margin-bottom: 1rem; 
+   background-color: #0E2F56;
+   height: 5px;
+}
+
 .card-body {
     color: #0E2F56;
 }
@@ -243,4 +249,12 @@ a {
 
 .fa-search{
     color: #A4B3BF;
+}
+
+.profile-btn {
+    float: right;
+    background-color: #A4B3BF;
+    color: #0F3759;
+    outline-color: #0F3759;
+    margin: 1px;
 }
