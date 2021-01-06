@@ -2,7 +2,9 @@
 
 ## Description
 ```
-GIT.Interview is a web-application that helps developers prepare for interview questions. The user can search topic of interest, create an account in our website and post new questions and answers. This is an application that utilizes Passport authentication, Express and Sequelize. 
+GIT.Interview is a web-application that helps developers prepare for interview questions. 
+The user can search topic of interest, create an account in our website and post new questions and answers. 
+This is an application that utilizes Passport authentication, Express and Sequelize. 
 ```
 ## Table of Content
  1. [Usage](#usage)
