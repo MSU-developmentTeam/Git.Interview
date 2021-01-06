@@ -45,8 +45,11 @@ As a user, I want to be able to vote on which solution is most helpful.
     * Navigate to the localhost port: http://localhost:8080 in the browser.
 
 ## Links
+    * Deployed Link: https://git-interview21.herokuapp.com/
+    * Repo Link:     
 
 ## Image
+![Git.Interview](/public/assets/Images/Screenshots/main-page.png)
 
 ## Contribution
     * Enxhi Salaj
