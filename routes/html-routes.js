@@ -3,8 +3,7 @@ module.exports = function(app) {
 
   // Home page
   app.get("/", function(req, res) {
-    // Replace with handlebars file    
-    //res.sendFile(path.join(__dirname, "../public/blog.html"));
+    // renders main page
     res.render("index");
     console.log('Index page');
   });

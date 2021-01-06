@@ -1,6 +1,4 @@
 const db = require('../models');
-const Sequelize = require('sequelize');
-const Op = Sequelize.Op;
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 const isEmail = require('../models/user');
@@ -12,44 +10,32 @@ module.exports = function (app) {
       // When user is logged in is directed to its profile page
       res.redirect("/profile");
     }
-    // Render login Handlebars page
+    // Render login page
     res.render("login.handlebars");
-    console.log('Login Page');
-
   });
 
   app.get("/signup", (req, res) => {
     // If the user already has an account send them to the home page to login
     if (req.user) {
       res.redirect("/profile");
-      console.log('Welcome Member Login');
     } else if (!isEmail) {
-      console.log('Enter valid email')
+      // Render signup page
       res.render("signup.handlebars");
     }
     // Render Handlebars page
     res.render("signup.handlebars")
-    console.log('Signup Page');
   });
 
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/profile", isAuthenticated, (req, res) => {
-    // res.render("profile.handlebars");
-    // console.log('Welcome Member');
-    let UserId = req.user.id;
-    //console.log(UserId + " first one");
+    // Database Query
     db.Question.findAll({
       where: {
         UserId: req.user.id
       }
     }).then(function (dbQuestion) {
-      
-      console.log("UserId " + UserId);
-      //res.render('profile');
-      res.json(dbQuestion);
-      //console.log(UserId + " second one ");
-      //res.json(dbQuestion);
-      //res.render('profile', { Question: UserId });
+      // Renders the profile page with user's posted questions
+      res.render('profile', { Question: dbQuestion });
     });
   });
 };
