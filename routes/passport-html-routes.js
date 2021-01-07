@@ -5,17 +5,17 @@ const isEmail = require('../models/user');
 module.exports = function (app) {
 
   app.get("/login", (req, res) => {
-    // If the user already has an account send them to the home page
+    // If the user already has an account send them to their profile page
     if (req.user) {
       // When user is logged in is directed to its profile page
       res.redirect("/profile");
     }
-    // Render login page
+    // Render login page if user is not logged in || Does not have an account
     res.render("login.handlebars");
   });
 
   app.get("/signup", (req, res) => {
-    // If the user already has an account send them to the home page to login
+    // If the user already has an account send them to their profile page 
     if (req.user) {
       res.redirect("/profile");
     } else if (!isEmail) {

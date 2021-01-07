@@ -19,9 +19,9 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
+  // Associating the Questions table with the Users table
   Question.associate = function(models) {
-    //qestion should belong to User
-    // A Post can't be created without a User due to the foreign key constraint
+    
     Question.belongsTo(models.User, {
       foreignKey: {
         allowNull: false

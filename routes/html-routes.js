@@ -1,4 +1,4 @@
-// Routes
+// Exporting HTML Routes
 module.exports = function(app) {
 
   // Home page
@@ -8,7 +8,7 @@ module.exports = function(app) {
     console.log('Index page');
   });
 
-  // questions route
+  // questions page
   app.get("/questions", function(req, res) {
     //Renders Questions handlebars page
     res.render("question.handlebars");

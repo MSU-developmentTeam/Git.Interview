@@ -21,18 +21,18 @@ module.exports = function (sequelize, DataTypes) {
 
       }
     },
-    // The password cannot be null
+  
     password: {
       type: DataTypes.STRING,
       allowNull: false
     }
   });
-  // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
+  // Seeing if the passworded entered by the user matches the one in our DB
   User.prototype.validPassword = function (password) {
     return bcrypt.compareSync(password, this.password);
   };
-  // Hooks are automatic methods that run during various phases of the User Model lifecycle
-  // In this case, before a User is created, we will automatically hash their password
+  
+  // Hashing the password before the User is created
   User.addHook("beforeCreate", user => {
     user.password = bcrypt.hashSync(
       user.password,
@@ -40,7 +40,7 @@ module.exports = function (sequelize, DataTypes) {
       null
     );
   });
-
+// When an User is deleted their questions are as well
   User.associate= function (models) {
     User.hasMany(models.Question, {
       onDelete: "cascade"

@@ -1,6 +1,6 @@
 const db = require("../models");
 const passport = require("../config/passport");
-
+// Exporting Authentication Routes
 module.exports = function(app) {
 // Route to send user info from login to database
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
@@ -38,8 +38,7 @@ module.exports = function(app) {
       // The user is not logged in, send back an empty object
       res.json({});
     } else {
-      // Otherwise send back the user's email and id
-      // Sending back a password, even a hashed password, isn't a good idea
+      // User is logged in send back the user's email and id
       res.json({
         username: req.user.username,
         id: req.user.id
