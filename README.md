@@ -60,7 +60,7 @@ As a user, I want to be able to vote on which solution is most helpful.
    * Pierce Rogg
    * Marlee Eyre
    * Sam Bishop
-   * Alex Tatum
+   * Alex Tatum.
    * Muneeb Ali
     
 ## Licence 
