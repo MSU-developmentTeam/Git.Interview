@@ -25,43 +25,43 @@ As a user, I want to be able to vote on which solution is most helpful.
 
 ```
 ## Technology
-    This application was built with:
-    * JavaScript
-    * Node.js
-    * Express
-    * Handlebars
-    * Sequelize
-    * MySQL
-    * Heroku
-    * HTML
-    * Bootstrap 
-    * Color Adobe
-    * Hatchful
-    * email-validator
-    * Passport Authentication 
-    * eslint
-    * bcryptjs
+   This application was built with:
+   * JavaScript
+   * Node.js
+   * Express
+   * Handlebars
+   * Sequelize
+   * MySQL
+   * Heroku
+   * HTML
+   * Bootstrap 
+   * Color Adobe
+   * Hatchful
+   * email-validator
+   * Passport Authentication 
+   * eslint
+   * bcryptjs
 
 ## Installation
-    * Make sure you have node installed in your machine and have cloned this repo.
-    * Run : ```npm install``` in order to install all dependencies 
-    * Run : ```node server.js``` and the application will start 
-    * Navigate to the localhost port: http://localhost:8080 in the browser.
+   * Make sure you have node installed in your machine and have cloned this repo.
+   * Run : ```npm install``` in order to install all dependencies 
+   * Run : ```node server.js``` and the application will start 
+   * Navigate to the localhost port: http://localhost:8080 in the browser.
 
 ## Links
-    * Deployed Link: https://git-interview21.herokuapp.com/
-    * Repo Link:     https://github.com/MSU-developmentTeam/Git.Interview
+   * Deployed Link: https://git-interview21.herokuapp.com/
+   * Repo Link:     https://github.com/MSU-developmentTeam/Git.Interview
 
 ## Image
 ![Git.Interview](/public/assets/Images/Screenshots/main-page.png)
 
 ## Contribution
-    * Enxhi Salaj
-    * Pierce Rogg
-    * Marlee Eyre
-    * Sam Bishop
-    * Alex Tatum
-    * Muneeb Ali
+   * Enxhi Salaj
+   * Pierce Rogg
+   * Marlee Eyre
+   * Sam Bishop
+   * Alex Tatum.
+   * Muneeb Ali
     
 ## Licence 
 ![License badge](https://img.shields.io/badge/license-MIT-green)
