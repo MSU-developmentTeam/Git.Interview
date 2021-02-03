@@ -15,10 +15,10 @@
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
-    "username": "e3y95qn2bxrwbuft",
-    "password": "dpvz5lctj1jmuvwc",
-    "database": "hxbl7mnw4xofw1dj",
-    "host": "pfw0ltdr46khxib3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql"
+    "username": "process.env.USERNAME",
+    "password": "process.env.PASSWORD",
+    "database": "process.env.DATABASE",
+    "host": "process.env.HOST",
+    "dialect": "process.env.DIALECT"
   }
 }

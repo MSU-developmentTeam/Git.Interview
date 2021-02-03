@@ -1,6 +1,9 @@
 const express = require('express');
 const session = require('express-session');
 const passport = require('./config/passport');
+const dotenv = require("dotenv");
+
+dotenv.config({path: './config/config.env'})
 // set Handlebars
 var exphbs = require("express-handlebars");
 
